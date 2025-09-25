@@ -1,0 +1,196 @@
+body {
+    background: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+}
+
+.topbar {
+    background: #13261f;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    font-weight: 900;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topbar .announcement {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.topbar .social a {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.result-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.result-card h5 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.grade-badge {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.print-btn {
+    margin-top: 15px;
+}
+
+.failed {
+    background: #f8d7da !important;
+}
+
+.summary-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.summary-card h5 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.summary-card .stat {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.college-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.college-header img {
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.college-header .college-info {
+    line-height: 1.2;
+    text-align: center;
+    min-width: 200px;
+}
+
+.college-header .college-info h4 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.college-header .college-info p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+}
+
+.print-student-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.print-student-info p {
+    margin: 0;
+    text-align: center;
+}
+
+.print-summary {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media print {
+    .print-btn {
+        display: none !important;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .printable,
+    .printable * {
+        visibility: visible;
+    }
+
+    .printable {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .btn,
+    form,
+    .topbar,
+    .summary-card,
+    .result-card.grade-legend {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .college-header {
+        flex-direction: column;
+    }
+
+    .print-student-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+footer {
+    background: #13261f;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffc107;
+}
